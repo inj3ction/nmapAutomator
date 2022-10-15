@@ -64,7 +64,7 @@ Most of these should be installed by default in Parrot OS and Kali Linux.
 If any recon recommended tools are found to be missing, they will be automatically omitted, and the user will be notified.
 
 # Installation:
-git clone https://github.com/21y4d/nmapAutomator.git
+git clone https://github.com/inj3ction/nmapAutomator/blob/main/nmapAutomator.sh
 sudo ln -s $(pwd)/nmapAutomator/nmapAutomator.sh /usr/local/bin/
 Usage:
 ./nmapAutomator.sh -h
