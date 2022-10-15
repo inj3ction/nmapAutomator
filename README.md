@@ -12,7 +12,7 @@ Automate nmap scans.
 Always have some recon running in the background.
 Once initial ports are found 'in 5-10 seconds', we can start manually looking into those ports, and let the rest run in the background with no interaction from our side whatsoever.
 
-#Features
+# Features
 Scans
 Network : Shows all live hosts in the host's network (~15 seconds)
 Port : Shows all open ports (~15 seconds)
@@ -24,7 +24,7 @@ Recon : Suggests recon commands, then prompts to automatically run them
 All : Runs all the scans (~20-30 minutes)
 Note: This is a reconnaissance tool, and it does not perform any exploitation.
 
-#Automatic Recon
+# Automatic Recon
 With the recon option, nmapAutomator will automatically recommend and run the best recon tools for each found port.
 If a recommended tool is missing from your machine, nmapAutomator will suggest how to install it.
 
@@ -46,7 +46,7 @@ Output
 nmapAutomator saves the output of each type of scan is saved into a separate file, under the output directory.
 The entire script output is also saved, which you can view with less -r outputDir/nmapAutomator_host_type.txt, or you can simply cat it.
 
-#Requirements:
+# Requirements:
 ffuf, which we can install with:
 
 sudo apt update
@@ -63,7 +63,7 @@ smtp-user-enum	snmp-check	snmpwalk	ldapsearch
 Most of these should be installed by default in Parrot OS and Kali Linux.
 If any recon recommended tools are found to be missing, they will be automatically omitted, and the user will be notified.
 
-#Installation:
+# Installation:
 git clone https://github.com/21y4d/nmapAutomator.git
 sudo ln -s $(pwd)/nmapAutomator/nmapAutomator.sh /usr/local/bin/
 Usage:
@@ -80,7 +80,7 @@ Scan Types:
 	Vulns   : Runs CVE scan and nmap Vulns scan on all found ports (~5-15 minutes)
 	Recon   : Suggests recon commands, then prompts to automatically run them
 	All     : Runs all the scans (~20-30 minutes)
-Example scans:
+# Example scans:
 
 ./nmapAutomator.sh --host 10.1.1.1 --type All
 ./nmapAutomator.sh -H 10.1.1.1 -t Basic
